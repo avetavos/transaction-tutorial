@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 function TransactionList(props) {
 	return (
@@ -46,5 +47,10 @@ function TransactionList(props) {
 		</div>
 	);
 }
+
+TransactionList.propTypes = {
+	transactionList: PropTypes.object.isRequired,
+	removeTransaction: PropTypes.func.isRequired
+};
 
 export default TransactionList;

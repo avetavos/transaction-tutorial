@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TransactionForm(props) {
 	return (
@@ -34,5 +35,11 @@ function TransactionForm(props) {
 		</div>
 	);
 }
+
+TransactionForm.propTypes = {
+	transaction: PropTypes.object.isRequired,
+	onHandleChange: PropTypes.func.isRequired,
+	onHandleSubmit: PropTypes.func.isRequired
+};
 
 export default TransactionForm;
