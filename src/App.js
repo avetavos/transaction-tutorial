@@ -17,6 +17,9 @@ function App() {
 	};
 	const onHandleSubmit = async e => {
 		e.preventDefault();
+		if (transaction.amount <= 0 || transaction.title.length <= 0) {
+			return false;
+		}
 		await setTransactionList([...transactionList, transaction]);
 		setTransaction({
 			...transaction,
