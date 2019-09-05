@@ -7,7 +7,7 @@ import TransactionList from './components/TransactionList';
 function App() {
 	const [transactionList, setTransactionList] = useState([]);
 	const [transaction, setTransaction] = useState({
-		id: uuid.v4(),
+		id: '',
 		category: 'income',
 		amount: 0,
 		title: ''
